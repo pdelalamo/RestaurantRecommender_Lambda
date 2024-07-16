@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: com.fitmymacros.restaurantrecommender.App::handleRequest
       Runtime: java17
-      CodeUri: target/App-jar-with-dependencies.jar
+      CodeUri: target/restaurantRecommender.jar
       Policies:
         - AWSLambdaBasicExecutionRole
         - Version: '2012-10-17'
