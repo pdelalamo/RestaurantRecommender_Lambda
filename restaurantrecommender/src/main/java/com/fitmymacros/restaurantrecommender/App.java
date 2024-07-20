@@ -89,7 +89,7 @@ public class App implements RequestHandler<Map<String, Object>, Object> {
             ChatCompletionResponse completionResponse = completionResponseMono.block();
             List<ChatCompletionResponseChoice> choices = completionResponse.getChoices();
             ChatCompletionResponseChoice aChoice = choices.get(0);
-            return buildSuccessResponse(aChoice.getMessage().getContent());
+            return buildSuccessResponse(this.parseJsonArray(aChoice.getMessage().getContent()));
         } catch (Exception e) {
             return this.buildErrorResponse(e.getMessage());
         }
