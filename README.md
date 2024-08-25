@@ -48,11 +48,4 @@ targetEnergy: Target energy intake.
 energyUnit: Unit of energy (e.g., kcal).
 weightUnit: Unit of weight (e.g., g).
 
-Example Input:
-{
-  "queryStringParameters": {
-    "querystring": "pdf=https://example.com/menu.pdf,mealTime=Lunch,protein=50,carbs=100,fat=30,targetEnergy=500,energyUnit=kcal,weightUnit=g"
-  }
-}
-Example Output:
 The Lambda function will return a JSON array with the recommended menu items that best match the nutritional targets.
